@@ -1,0 +1,272 @@
+@import "../../styles/variables.scss";
+
+.header {
+  position: relative;
+  background: rgb(177, 222, 255);
+  background: radial-gradient(
+    circle,
+    rgba(227, 242, 253, 0.45) 0%,
+    rgba(147, 222, 247, 0.254) 78%
+  );
+  &-top {
+    padding: 20px 130px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &-name {
+      color: $mainBlueHeader;
+      font-family: "Rubik";
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      justify-self: flex-start;
+      margin-right: auto;
+    }
+    &-nav {
+      &-list {
+        display: flex;
+        gap: 50px;
+        font-size: 16px;
+        li {
+          font-family: "Poppins";
+          color: #262323;
+          opacity: 0.3;
+          transition: all 0.3s ease-in;
+        }
+        .active-link {
+          opacity: 1;
+          color: $mainBlueHeader;
+        }
+      }
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: $mainBlueHeader;
+      font-family: "Poppins";
+      border: none;
+      border-radius: 5px;
+      margin-left: 50px;
+    }
+  }
+
+  &-info {
+    margin-top: 100px;
+    display: flex;
+    padding: 0 50px 0 130px;
+    align-items: center;
+    justify-content: center;
+
+    &-left {
+      width: 50%;
+      display: flex;
+      gap: 30px;
+      padding-bottom: 100px;
+      flex-direction: column;
+      &-prev {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 70px;
+        color: #3e3e3e;
+        font-family: "Poppins";
+        span {
+          color: #40a3f8;
+        }
+      }
+      &-info {
+        color: rgba(117, 117, 117, 0.46);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+      }
+
+      .header_form {
+        filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.2));
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        width: max-content;
+        padding: 15px;
+        border-radius: 8px;
+        gap: 20px;
+        &-search {
+          width: 210px;
+          background: rgba(245, 246, 250, 0.52);
+          border-radius: 4px;
+          border: none;
+          font-size: 16px;
+          padding-left: 10px;
+          border: 1px solid rgb(192, 192, 192);
+        }
+      }
+      button {
+        background-color: $mainBlueHeader;
+      }
+    }
+
+    &-right {
+      position: relative;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../../assets/images/header-doctorBG.png);
+      background-position: top;
+      background-repeat: no-repeat;
+      .callback {
+        position: absolute;
+        filter: drop-shadow(5px 4px 22px rgba(0, 0, 0, 0.3));
+      }
+      &-logo-1 {
+        left: 0px;
+      }
+      &-logo-2 {
+        left: 135px;
+        top: 10px;
+      }
+      &-logo-3 {
+        left: 500px;
+        top: 50px;
+      }
+
+      &-client {
+        position: absolute;
+        left: 470px;
+        top: 350px;
+        height: 112px;
+        width: 160px;
+        background-color: white;
+        border-radius: 11px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins";
+        filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.2));
+        &-pulse {
+          width: 45px;
+          animation: heartbeat 1s infinite;
+          user-select: none;
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 36px;
+          letter-spacing: 0.02em;
+          color: #3d3d3f;
+        }
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: 0.02em;
+          color: rgba(61, 61, 63, 0.56);
+        }
+      }
+      &-feedback {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        width: 210px;
+        background-color: white;
+        filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.2));
+        border-radius: 10px;
+        left: 30px;
+        top: 500px;
+        img {
+          width: 60px;
+          aspect-ratio: 1;
+        }
+
+        .feedback-text {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .stars {
+            display: flex;
+            gap: 4px;
+          }
+          .skeleton {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 6px;
+            background: #c9c9c9;
+          }
+          .second {
+            width: 80%;
+          }
+
+          .skeleton::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(
+              to right,
+              #d9d9d9 0%,
+              rgba(0, 0, 0, 0.1) 20%,
+              #d9d9d9 40%,
+              #d9d9d9 100%
+            );
+            background-repeat: no-repeat;
+            background-size: 450px 400px;
+            animation: shimmer 4s linear infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #d9d9d9 0%,
+    rgba(0, 0, 0, 0.07) 20%,
+    #d9d9d9 40%,
+    #d9d9d9 100%
+  );
+  animation-delay: 0.22s;
+  background-repeat: no-repeat;
+  background-size: 450px 400px;
+  animation: shimmer 1s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
