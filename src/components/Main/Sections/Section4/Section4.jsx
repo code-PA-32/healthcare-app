@@ -5,12 +5,12 @@ import {
   FaceBookColor,
   TwitterColor,
   LinkedInColor,
-} from "../../../assets/media/MediaIcons";
+} from "../../../../assets/media/MediaIcons";
 
-import doc1 from "../../../assets/images/slide-doctor1.png";
-import doc2 from "../../../assets/images/slide-doctor2.png";
-import doc3 from "../../../assets/images/slide-doctor3.png";
-import doc4 from "../../../assets/images/slide-doctor4.png";
+import doc1 from "../../../../assets/images/slide-doctor1.png";
+import doc2 from "../../../../assets/images/slide-doctor2.png";
+import doc3 from "../../../../assets/images/slide-doctor3.png";
+import doc4 from "../../../../assets/images/slide-doctor4.png";
 
 export const Section4 = () => {
   const doctorsData = [

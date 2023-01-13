@@ -1,0 +1,40 @@
+@import "../../../../styles/variables.scss";
+
+.mobile_app {
+  padding: 0px 150px 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-image {
+    width: 50%;
+    img {
+    //   width: 100%;
+    //   height: 100%;
+    }
+  }
+  &-description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    h2 {
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 60px;
+      letter-spacing: 0.02em;
+      color: #3d3d3f;
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: rgba(61, 61, 63, 0.7);
+    }
+    .app_links{
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+    }
+  }
+}
