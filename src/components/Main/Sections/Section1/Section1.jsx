@@ -1,6 +1,8 @@
-import calendar from "../../../assets/images/calendar.png";
-import search from "../../../assets/images/search.png";
-import phone from "../../../assets/images/health-phone.png";
+import calendar from "../../../../assets/images/calendar.png";
+import search from "../../../../assets/images/search.png";
+import phone from "../../../../assets/images/health-phone.png";
+
+import './section1.scss'
 
 export const Section1 = () => {
   const data = [

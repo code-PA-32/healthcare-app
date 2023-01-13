@@ -1,13 +1,15 @@
-import doctor from "../../../assets/images/main-doctor.png";
+import doctor from "../../../../assets/images/main-doctor.png";
 import {
   Hearts,
   Location,
   Star,
   CheckMark,
   ArrowRight,
-} from "../../../assets/media/MediaIcons";
-import feedback from "../../../assets/images/feedback2.png";
+} from "../../../../assets/media/MediaIcons";
+import feedback from "../../../../assets/images/feedback2.png";
 import { Button } from "@mui/material";
+
+import "./section2.scss";
 
 export const Section2 = () => {
   const listData = [

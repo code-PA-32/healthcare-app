@@ -5,8 +5,8 @@ import {
   Blood,
   Langs,
   Medicine,
-} from "../../../assets/media/MediaIcons";
-
+} from "../../../../assets/media/MediaIcons";
+import "./section3.scss";
 export const Section3 = () => {
   const slideData = [
     {
@@ -35,7 +35,7 @@ export const Section3 = () => {
   return (
     <section className="services">
       <h2>Our Service</h2>
-      <p>
+      <p className="services-info">
         Our doctors have high qualified skills and are guaranteed to help you
         recover from your disease.
       </p>
@@ -52,7 +52,11 @@ const Slider = ({ data }) => {
     <div className="slideshow">
       <ul
         className="topSlide-slider"
-        style={{ transform: `translate3d(${-currentIndex * 350 - (currentIndex * 20)}px, 0, 0)` }}
+        style={{
+          transform: `translate3d(${
+            -currentIndex * 350 - currentIndex * 60
+          }px, 0, 0)`,
+        }}
       >
         {data.map((item, i) => (
           <li
@@ -68,12 +72,13 @@ const Slider = ({ data }) => {
       </ul>
       <div className="dots">
         {data.map((_, i) => (
-          <div key={i} className={currentIndex === i ? 'dot dot-active' : 'dot'} onClick={() => setCurrentIndex(i)}>
-            
-          </div>
+          <div
+            key={i}
+            className={currentIndex === i ? "dot dot-active" : "dot"}
+            onClick={() => setCurrentIndex(i)}
+          ></div>
         ))}
       </div>
     </div>
   );
 };
-
