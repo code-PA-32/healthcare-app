@@ -830,96 +830,39 @@ export const Star = () => {
   );
 };
 
-export const DotsBG = () => {
+export const CheckMark = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="171"
-      height="171"
+      width="20"
+      height="20"
       fill="none"
-      viewBox="0 0 171 171"
+      viewBox="0 0 20 20"
     >
-      <g fill="#CDE9FF" filter="url(#filter0_d_1_198)">
-        <circle cx="25.522" cy="21.27" r="3.009"></circle>
-        <circle cx="45.539" cy="21.27" r="3.009"></circle>
-        <circle cx="65.557" cy="21.27" r="3.009"></circle>
-        <circle cx="85.574" cy="21.27" r="3.009"></circle>
-        <circle cx="105.592" cy="21.27" r="3.009"></circle>
-        <circle cx="125.609" cy="21.27" r="3.009"></circle>
-        <circle cx="145.627" cy="21.27" r="3.009"></circle>
-        <circle cx="25.522" cy="41.288" r="3.009"></circle>
-        <circle cx="25.522" cy="61.305" r="3.009"></circle>
-        <circle cx="25.522" cy="81.323" r="3.009"></circle>
-        <circle cx="25.522" cy="101.341" r="3.009"></circle>
-        <circle cx="25.522" cy="121.358" r="3.009"></circle>
-        <circle cx="25.522" cy="141.376" r="3.009"></circle>
-        <circle cx="45.539" cy="141.376" r="3.009"></circle>
-        <circle cx="65.557" cy="141.376" r="3.009"></circle>
-        <circle cx="85.574" cy="141.376" r="3.009"></circle>
-        <circle cx="105.592" cy="141.376" r="3.009"></circle>
-        <circle cx="125.609" cy="141.376" r="3.009"></circle>
-        <circle cx="145.627" cy="141.376" r="3.009"></circle>
-        <circle cx="45.539" cy="121.358" r="3.009"></circle>
-        <circle cx="65.557" cy="121.358" r="3.009"></circle>
-        <circle cx="85.574" cy="121.358" r="3.009"></circle>
-        <circle cx="105.592" cy="121.358" r="3.009"></circle>
-        <circle cx="125.609" cy="121.358" r="3.009"></circle>
-        <circle cx="145.627" cy="121.358" r="3.009"></circle>
-        <circle cx="45.539" cy="101.341" r="3.009"></circle>
-        <circle cx="65.557" cy="101.341" r="3.009"></circle>
-        <circle cx="85.574" cy="101.341" r="3.009"></circle>
-        <circle cx="105.592" cy="101.341" r="3.009"></circle>
-        <circle cx="125.609" cy="101.341" r="3.009"></circle>
-        <circle cx="145.627" cy="101.341" r="3.009"></circle>
-        <circle cx="45.539" cy="81.323" r="3.009"></circle>
-        <circle cx="65.557" cy="81.323" r="3.009"></circle>
-        <circle cx="85.574" cy="81.323" r="3.009"></circle>
-        <circle cx="105.592" cy="81.323" r="3.009"></circle>
-        <circle cx="125.609" cy="81.323" r="3.009"></circle>
-        <circle cx="145.627" cy="81.323" r="3.009"></circle>
-        <circle cx="45.539" cy="61.305" r="3.009"></circle>
-        <circle cx="65.557" cy="61.305" r="3.009"></circle>
-        <circle cx="85.574" cy="61.305" r="3.009"></circle>
-        <circle cx="105.592" cy="61.305" r="3.009"></circle>
-        <circle cx="125.609" cy="61.305" r="3.009"></circle>
-        <circle cx="145.627" cy="61.305" r="3.009"></circle>
-        <circle cx="45.539" cy="41.288" r="3.009"></circle>
-        <circle cx="65.557" cy="41.288" r="3.009"></circle>
-        <circle cx="85.574" cy="41.288" r="3.009"></circle>
-        <circle cx="105.592" cy="41.288" r="3.009"></circle>
-        <circle cx="125.609" cy="41.288" r="3.009"></circle>
-        <circle cx="145.627" cy="41.288" r="3.009"></circle>
-      </g>
-      <defs>
-        <filter
-          id="filter0_d_1_198"
-          width="170.123"
-          height="170.123"
-          x="0.513"
-          y="0.261"
-          colorInterpolationFilters="sRGB"
-          filterUnits="userSpaceOnUse"
-        >
-          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-          <feColorMatrix
-            in="SourceAlpha"
-            result="hardAlpha"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          ></feColorMatrix>
-          <feOffset dy="4"></feOffset>
-          <feGaussianBlur stdDeviation="11"></feGaussianBlur>
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"></feColorMatrix>
-          <feBlend
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_1_198"
-          ></feBlend>
-          <feBlend
-            in="SourceGraphic"
-            in2="effect1_dropShadow_1_198"
-            result="shape"
-          ></feBlend>
-        </filter>
-      </defs>
+      <path
+        fill="#40A3F8"
+        d="M10 1.25a8.75 8.75 0 10.001 17.501A8.75 8.75 0 0010 1.25zm3.78 5.893l-4.114 5.703a.621.621 0 01-1.01 0L6.221 9.47a.157.157 0 01.127-.248h.916c.199 0 .388.095.506.26l1.39 1.93 3.07-4.259a.625.625 0 01.506-.26h.916c.127 0 .202.145.127.249z"
+      ></path>
+    </svg>
+  );
+};
+
+export const ArrowRight = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="13"
+      fill="none"
+      viewBox="0 0 14 13"
+    >
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M1 6.25h12M7.75 1L13 6.25 7.75 11.5"
+      ></path>
     </svg>
   );
 };
