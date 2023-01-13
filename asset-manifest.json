@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/healtcare-app/static/css/main.c60684ce.css",
+    "main.js": "/healtcare-app/static/js/main.b6d5d408.js",
+    "static/media/header-doctor1.png": "/healtcare-app/static/media/header-doctor1.f2f6ce5210c264648428.png",
+    "static/media/main-doctor.png": "/healtcare-app/static/media/main-doctor.446666be313b7179e55a.png",
+    "static/media/main-mobile.png": "/healtcare-app/static/media/main-mobile.5cdf77e098dd18c11fb5.png",
+    "static/media/logo.png": "/healtcare-app/static/media/logo.a38e5e39649286d10e7b.png",
+    "static/media/waveBG.png": "/healtcare-app/static/media/waveBG.4b745ebc023884ac859d.png",
+    "static/media/health-phone.png": "/healtcare-app/static/media/health-phone.d2433b3991d3419ca711.png",
+    "static/media/slide-doctor4.png": "/healtcare-app/static/media/slide-doctor4.eaed1643cf752b0e1063.png",
+    "static/media/slide-doctor1.png": "/healtcare-app/static/media/slide-doctor1.2573885577fe398f9a94.png",
+    "static/media/slide-doctor2.png": "/healtcare-app/static/media/slide-doctor2.a003365732d8c227e7a2.png",
+    "static/media/header-doctorBG.png": "/healtcare-app/static/media/header-doctorBG.c8a7dfda2a74e42363a2.png",
+    "static/media/mainBG.png": "/healtcare-app/static/media/mainBG.c06f571aed63bea1f8ba.png",
+    "static/media/heart.png": "/healtcare-app/static/media/heart.9165db7fdc342480ab86.png",
+    "static/media/shape.png": "/healtcare-app/static/media/shape.695cc3b5bd24e497e22f.png",
+    "static/media/calendar.png": "/healtcare-app/static/media/calendar.657792a8ccd1ac18b7b1.png",
+    "static/media/search.png": "/healtcare-app/static/media/search.688e8d732a79a11df30e.png",
+    "static/media/slide-doctor3.png": "/healtcare-app/static/media/slide-doctor3.7cde45f7a93c7bd06fba.png",
+    "static/media/avatar6.png": "/healtcare-app/static/media/avatar6.2c5fd1a995e6efd9d36f.png",
+    "static/media/feedback1.png": "/healtcare-app/static/media/feedback1.2c5fd1a995e6efd9d36f.png",
+    "static/media/avatar4.png": "/healtcare-app/static/media/avatar4.d4fc71f6b792bc7bb9ad.png",
+    "static/media/avatar3.png": "/healtcare-app/static/media/avatar3.74f47d52649f188c57b3.png",
+    "static/media/avatar1.png": "/healtcare-app/static/media/avatar1.8fd998258dddf9e660e6.png",
+    "static/media/avatar5.png": "/healtcare-app/static/media/avatar5.48b5119f18c373cc94e7.png",
+    "static/media/feedback2.png": "/healtcare-app/static/media/feedback2.48b5119f18c373cc94e7.png",
+    "static/media/avatar2.png": "/healtcare-app/static/media/avatar2.3e0bea3d4fb30e2c042d.png",
+    "static/media/dots.png": "/healtcare-app/static/media/dots.fb813d2ab57ddc8ed717.png",
+    "index.html": "/healtcare-app/index.html",
+    "main.c60684ce.css.map": "/healtcare-app/static/css/main.c60684ce.css.map",
+    "main.b6d5d408.js.map": "/healtcare-app/static/js/main.b6d5d408.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c60684ce.css",
+    "static/js/main.b6d5d408.js"
+  ]
+}
