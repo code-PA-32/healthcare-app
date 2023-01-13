@@ -51,7 +51,8 @@
       border-bottom: 15px transparent solid;
       border-radius: 10px;
       transition: all 1s ease;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+
       h5 {
         font-weight: 500;
         font-size: 18px;
@@ -70,6 +71,7 @@
     .slide-active {
       border-bottom: #40a3f8 solid 15px;
       transform: scale(1.07);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     }
     .dots {
       display: flex;

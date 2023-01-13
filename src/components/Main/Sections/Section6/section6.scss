@@ -1,0 +1,115 @@
+@import "../../../../styles//variables.scss";
+
+.comments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  gap: 60px;
+  h2 {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0.02em;
+    color: #3d3d3f;
+  }
+
+  &-slider {
+    position: relative;
+
+    width: 90%;
+    padding-left: 31%;
+    padding-right: 30%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 30px;
+    &-slides {
+      display: flex;
+      transition: ease-out 1000ms;
+      margin: 0 auto;
+      gap: 30px;
+      &-slide {
+        background-color: white;
+        img {
+          height: 65px;
+          width: 65px;
+        }
+        position: relative;
+        user-select: none;
+        padding: 20px 20px 30px 40px;
+        width: 370px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        transition: all 1s ease;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+        .quotes {
+          position: absolute;
+          top: 0;
+          left: 290px;
+          transform: translate(0, -50%);
+        }
+        .comment_info {
+          width: 100%;
+          display: flex;
+          padding-right: 10px;
+          justify-content: space-between;
+          .comment_name_location {
+            font-weight: 700;
+            font-size: 20px;
+            color: #3d3d3f;
+            display: flex;
+            flex-direction: column;
+            .comment_location {
+              font-weight: 400;
+              font-size: 14px;
+              color: $mainBlueHeader;
+            }
+          }
+          .comment_stars {
+            display: flex;
+            gap: 3px;
+          }
+        }
+      }
+      .comment_text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        /* or 156% */
+
+        color: #454d5d;
+      }
+    }
+
+    .controls {
+      position: absolute;
+      height: 22px;
+      width: 22px;
+    }
+    .next-active {
+      top: 0;
+      right: 0px;
+      background-image: url(../../../../assets/images/nextActive.png);
+      background-position: 10px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: $mainBlueHeader;
+      border: none;
+    }
+    .prev-active {
+      top: 0;
+      left: 0px;
+      background-image: url(../../../../assets/images/nextFade.png);
+      transform: rotate(180deg);
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
