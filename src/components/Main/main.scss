@@ -80,9 +80,7 @@
 }
 //! Section 1
 
-
 //! Section 2
-
 
 .doctor {
   padding: 100px 100px 100px 150px;
@@ -308,4 +306,74 @@
 
 //! Section 3
 
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 130px;
 
+  .slideshow {
+    width: 100%;
+    padding-left: 35%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 30px;
+
+    .topSlide-slider {
+      transition: ease-out 1000ms;
+      display: flex;
+      margin: 0 auto;
+      gap: 20px;
+    }
+    .slide {
+      user-select: none;
+      padding: 50px;
+      width: 350px;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 15px transparent solid;
+      border-radius: 10px;
+      transition: all 2s ease;
+      h5 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        color: #3d3d3f;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        color: #999999;
+      }
+    }
+    .slide-active {
+      border-bottom: #40a3f8 solid 15px;
+    }
+    .dots {
+      display: flex;
+      padding-left: calc(350px / 3);
+      gap: 15px;
+      .dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #dbe8ee;
+        transition: all 1s ease;
+        align-items: center;
+      }
+      .dot-active {
+        width: 60px;
+        height: 18px;
+        border-radius: 10px;
+        background: #40a3f8;
+      }
+    }
+  }
+}
