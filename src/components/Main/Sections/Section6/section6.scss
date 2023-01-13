@@ -82,34 +82,9 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 25px;
-        /* or 156% */
-
         color: #454d5d;
       }
     }
 
-    .controls {
-      position: absolute;
-      height: 22px;
-      width: 22px;
-    }
-    .next-active {
-      top: 0;
-      right: 0px;
-      background-image: url(../../../../assets/images/nextActive.png);
-      background-position: 10px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-color: $mainBlueHeader;
-      border: none;
-    }
-    .prev-active {
-      top: 0;
-      left: 0px;
-      background-image: url(../../../../assets/images/nextFade.png);
-      transform: rotate(180deg);
-      background-position: center;
-      background-size: contain;
-    }
   }
 }

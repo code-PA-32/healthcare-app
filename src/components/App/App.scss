@@ -7,10 +7,17 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
- box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
 }
-body{
-  font-family: 'Roboto';
+body {
+  font-family: "Roboto";
   background-image: url(../../assets/images/mainBG.png);
+  background-size: cover;
+  background: rgb(177, 222, 255);
+  background: radial-gradient(
+    circle,
+    rgba(227, 242, 253, 0.45) 0%,
+    rgba(147, 222, 247, 0.254) 78%
+  );
 }

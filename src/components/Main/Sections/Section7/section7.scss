@@ -1,0 +1,54 @@
+@import "../../../../styles/variables.scss";
+
+.booking {
+  padding: 100px 135px 120px 135px;
+
+  &-wrapper::before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #40A3F8;
+    left: 0;
+    bottom: 0;
+    height: 80%;
+    width: 100%;
+    border-radius: 12px;
+    z-index: -1;
+    background-image: url(../../../../assets/images/waveBG.png);
+
+  }
+
+  &-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    &-info {
+      width: 40%;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 55px;
+      text-transform: capitalize;
+      button{
+        margin-top: 10px;
+        background-color: white;
+        color: $mainBlueHeader;
+        padding: 15px 20px;
+      }
+      button:hover{
+        background-color: #aed9fe;
+      }
+    }
+    &-image {
+      width: 40%;
+      img{
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
