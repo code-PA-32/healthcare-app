@@ -1,46 +1,17 @@
 import { useState } from "react";
-
-import {
-  Cardio,
-  Blood,
-  Langs,
-  Medicine,
-} from "../../../../assets/media/MediaIcons";
 import "./section3.scss";
-export const Section3 = () => {
-  const slideData = [
-    {
-      img: <Cardio />,
-      h5: "Cardiology",
-      p: `Our cardiologists are skilled at  the diagnosing and treating diseases
-            of the cardiovascular system.`,
-    },
-    {
-      img: <Blood />,
-      h5: "Blood",
-      p: `Your blood is made up of liquid and solids. The liquid part, called plasma, is made of water, salts, and protein. `,
-    },
-    {
-      img: <Langs />,
-      h5: "Pulmonology",
-      p: `Our Pulmonologist are skilled at  diagnosing treating diseases of the Pulmonology system.`,
-    },
-    {
-      img: <Medicine />,
-      h5: "Medicine",
-      p: `Our medicine doctor are skilled at  diagnosing treating diseases of the  latest medicine system.`,
-    },
-  ];
+
+export const Section3 = (props) => {
+  const { list } = props.data;
 
   return (
-    <section className="services">
+    <section className="services" id="services">
       <h2>Our Service</h2>
       <p className="services-info">
         Our doctors have high qualified skills and are guaranteed to help you
         recover from your disease.
       </p>
-
-      <Slider data={slideData} />
+      <Slider data={list} />
     </section>
   );
 };

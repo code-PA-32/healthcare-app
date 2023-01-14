@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Location,
   SearchIconHeader,
@@ -16,59 +16,8 @@ import doctor from "../../../assets/images/header-doctor1.png";
 import heart from "../../../assets/images/heart.png";
 import feedback from "../../../assets/images/feedback1.png";
 
-export const HeaderInfo = () => {
-  const locationList = [
-    "Alabama",
-    "Alaska",
-    "Arizona",
-    "Arkansas",
-    "California",
-    "Colorado",
-    "Connecticut",
-    "Delaware",
-    "Florida",
-    "Georgia",
-    "Hawaii",
-    "Idaho",
-    "Illinois",
-    "Indiana",
-    "Iowa",
-    "Kansas",
-    "Kentucky",
-    "Louisiana",
-    "Maine",
-    "Maryland",
-    "Massachusetts",
-    "Michigan",
-    "Minnesota",
-    "Mississippi",
-    "Missouri",
-    "Montana",
-    "Nebraska",
-    "Nevada",
-    "New Hampshire",
-    " New Jersey",
-    "New Mexico",
-    "New York",
-    "North Carolina",
-    "North Dakota",
-    "Ohio",
-    "Oklahoma",
-    "Oregon",
-    "Pennsylvania",
-    "Rhode Island",
-    "South Carolina",
-    "South Dakota",
-    "Tennessee",
-    "Texas",
-    "Utah",
-    "Vermont",
-    "Virginia",
-    "Washington",
-    "West Virginia",
-    "Wisconsin",
-    "Wyoming",
-  ];
+export const HeaderInfo = (props) => {
+  const { locations, clients } = props;
   const logos = [<ChatPhone />, <Discussion />, <VideoCall />];
 
   const ITEM_HEIGHT = 48;
@@ -105,7 +54,9 @@ export const HeaderInfo = () => {
             className="header_form-search"
           />
           <FormControl className="header_form-select">
-            <InputLabel sx={{ display: "flex", border: 'none', alignItems: "center" }}>
+            <InputLabel
+              sx={{ display: "flex", border: "none", alignItems: "center" }}
+            >
               {<Location />}&#160;&#160;Location&#160;&#160;&#160;
             </InputLabel>
             <Select
@@ -118,7 +69,7 @@ export const HeaderInfo = () => {
               label=" &#160;&#160;&#160;Location&#160;&#160;&#160;"
               onChange={handleChange}
             >
-              {locationList.map((item) => (
+              {locations.map((item) => (
                 <MenuItem key={item} value={item}>
                   {<Location />}&#160;&#160;
                   {item}
@@ -139,18 +90,30 @@ export const HeaderInfo = () => {
             {item}
           </div>
         ))}
-        {<HappyClient />}
+        {<HappyClient clients={clients} />}
         {<Feedback />}
       </div>
     </div>
   );
 };
 
-const HappyClient = () => {
+const HappyClient = (props) => {
+  const [number, setNumber] = useState(props.clients);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setNumber(number + 1);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [number]);
+
   return (
     <div className="header-info-right-client">
       <img src={heart} alt="heart" className="header-info-right-client-pulse" />
-      <h3>2500+</h3>
+      <h3>{number}+</h3>
       <p>Happy Patients</p>
     </div>
   );

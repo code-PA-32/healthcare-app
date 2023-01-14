@@ -1,14 +1,30 @@
 @import "../../styles/variables.scss";
 
+
 .header {
-  position: relative;
   background: rgb(177, 222, 255);
   background: radial-gradient(
     circle,
     rgba(227, 242, 253, 0.45) 0%,
     rgba(147, 222, 247, 0.254) 78%
   );
+
+  &-top_intersecting {
+    position: fixed;
+    // top: 0;
+    width: 100%;
+    background: rgb(177, 222, 255);
+    background: radial-gradient(
+      circle,
+      rgba(227, 242, 253, 0.75) 0%,
+      rgba(147, 222, 247, 0.854) 78%
+    );
+    z-index: 2;
+    transition: all 1s;
+  }
+
   &-top {
+    transition: all 1s;
     padding: 20px 130px;
     display: flex;
     align-items: center;
@@ -244,8 +260,6 @@
     transform: scale(0.75);
   }
 }
-
-
 
 @keyframes shimmer {
   0% {

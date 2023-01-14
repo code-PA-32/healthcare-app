@@ -4,7 +4,7 @@ import logo from "../../../../assets/images/logo.png";
 
 export const Section7 = () => {
   return (
-    <section className="booking">
+    <section className="booking" id="booking">
       <div className="booking-wrapper">
         <div className="booking-wrapper-info">
           <h2>It’s time change your life today</h2>

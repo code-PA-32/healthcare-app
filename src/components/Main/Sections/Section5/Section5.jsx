@@ -4,7 +4,7 @@ import { GoogleStore, AppleStore } from "../../../../assets/media/MediaIcons";
 
 export const Section5 = () => {
   return (
-    <section className="mobile_app">
+    <section className="mobile_app" id="article">
       <div className="mobile_app-image">
         <img src={mobile} alt="mobile" />
       </div>

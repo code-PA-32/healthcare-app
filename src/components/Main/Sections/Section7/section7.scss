@@ -37,9 +37,10 @@
         background-color: white;
         color: $mainBlueHeader;
         padding: 15px 20px;
+        transition: all 0.3s;
       }
       button:hover{
-        background-color: #aed9fe;
+        color: #ffffff;
       }
     }
     &-image {

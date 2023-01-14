@@ -1,4 +1,4 @@
-import doctor from "../../../../assets/images/main-doctor.png";
+import { Button } from "@mui/material";
 import {
   Hearts,
   Location,
@@ -7,23 +7,18 @@ import {
   ArrowRight,
 } from "../../../../assets/media/MediaIcons";
 import feedback from "../../../../assets/images/feedback2.png";
-import { Button } from "@mui/material";
-
 import "./section2.scss";
 
-export const Section2 = () => {
-  const listData = [
-    "Search your specialist & Online consultations anywhere",
-    "Consultation our top specialists",
-    "Doctors are available 24/7",
-  ];
+export const Section2 = (props) => {
+  const { doctors, list } = props.data;
+  console.log(doctors);
   return (
-    <section className="doctor">
+    <section className="doctor" id="about">
       <div className="doctor-left">
         <div className="overflow-box">
-          <img src={doctor} alt="doctor" />
+          <img src={doctors[0].photo} alt="doctor" />
         </div>
-        <Rate />
+        <Rate data={doctors} />
         <Skeleton />
       </div>
 
@@ -35,7 +30,7 @@ export const Section2 = () => {
           are also very talented in their fields
         </p>
         <ul>
-          {listData.map((item, i) => (
+          {list.map((item, i) => (
             <li key={i}>
               <CheckMark />
               &nbsp;&nbsp;
@@ -44,41 +39,45 @@ export const Section2 = () => {
           ))}
         </ul>
         <Button variant="contained">
-          Explore specialists&nbsp; <ArrowRight />
+          <a href="#doctors">
+            Explore specialists&nbsp; <ArrowRight />
+          </a>
         </Button>
       </div>
     </section>
   );
 };
 
-const Rate = () => {
+const Rate = (props) => {
+  const { photo, name, spec, rating, exp, patients, reviews, location } =
+    props.data[0];
   return (
     <div className="doctor-left-rate">
       <div className="heart">{<Hearts />}</div>
       <div className="doctor-left-rate-info">
-        <img src={doctor} alt="doctor" />
+        <img src={photo} alt="doctor" />
         <div className="doctor-left-rate-info-name">
-          <h4>Dr. Khalid Abbed</h4>
-          <span>Carddiologist (MBBS) </span>
+          <h4>{name}</h4>
+          <span>{spec} </span>
           <span>
-            <Star /> 5.0
+            <Star /> {rating}
           </span>
         </div>
       </div>
       <ul>
         <li>
-          <span>Experience</span> <span>5 Years</span>
+          <span>Experience</span> <span>{exp}</span>
         </li>
         <li>
-          <span>Patients</span> <span>3.4K</span>
+          <span>Patients</span> <span>{patients}K</span>
         </li>
         <li>
           <span>Reviews</span>
-          <span>2.4K</span>
+          <span>{reviews}K</span>
         </li>
       </ul>
       <div className="doctor-left-rate-location">
-        <Location /> Mayo Clinic Hospital
+        <Location /> {location}
       </div>
     </div>
   );

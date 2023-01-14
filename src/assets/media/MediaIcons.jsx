@@ -125,17 +125,32 @@ export const Discussion = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="55"
-      height="55"
-      fill="#00df8e;"
-      stroke="#00df8e;"
-      className="icon glyph"
-      viewBox="0 0 24 24"
+      width="64"
+      height="64"
+      viewBox="-1 0 36 36"
     >
-      <path
-        fill="#20df40"
-        d="M19.91 16.51A8.45 8.45 0 0022 11c0-5-4.49-9-10-9S2 6 2 11s4.49 9 10 9a10.9 10.9 0 003-.41l4.59 2.3A.91.91 0 0020 22a1 1 0 00.62-.22 1 1 0 00.35-1zM8 12a1 1 0 111-1 1 1 0 01-1 1zm4 0a1 1 0 111-1 1 1 0 01-1 1zm4 0a1 1 0 111-1 1 1 0 01-1 1z"
-      ></path>
+      <g>
+        <g fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
+          <g transform="translate(-668 -409)">
+            <g transform="translate(37 169)">
+              <g transform="translate(624 234)">
+                <g>
+                  <path
+                    fill="#20df40"
+                    d="M17 31.765A18.556 18.556 0 016.924 29.1L0 36V15.882l.012.006C.011 15.791 0 15.7 0 15.6 0 6.369 6.247 0 17 0s17 6.652 17 15.882-6.247 15.883-17 15.883z"
+                    transform="translate(7 6)"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M24.994 12.99a3 3 0 110 6 3 3 0 010-6zM17 13a3 3 0 110 6 3 3 0 010-6zm-8 0a3 3 0 110 6 3 3 0 010-6z"
+                    transform="translate(7 6)"
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
     </svg>
   );
 };

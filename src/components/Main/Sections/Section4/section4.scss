@@ -56,7 +56,8 @@
     margin-top: 50px;
     display: flex;
     flex-direction: row;
-    gap: 36px;
+    flex-wrap: wrap;
+    gap: 30px;
 
     &-item {
       background: linear-gradient(
@@ -97,9 +98,24 @@
         gap: 10px;
       }
     }
+    button {
+      margin: 30px auto;
+      background-color: $mainBlueHeader;
+    }
   }
-  button {
-    margin-top: 30px;
-    background-color: $mainBlueHeader;
-  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }

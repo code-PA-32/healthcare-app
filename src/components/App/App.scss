@@ -10,6 +10,9 @@
   box-sizing: border-box;
   color: inherit;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto";
   background-image: url(../../assets/images/mainBG.png);

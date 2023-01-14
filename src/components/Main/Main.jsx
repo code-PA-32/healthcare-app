@@ -7,15 +7,17 @@ import { Section5 } from "./Sections/Section5/Section5";
 import { Section6 } from "./Sections/Section6/Section6";
 import { Section7 } from "./Sections/Section7/Section7";
 
-export const Main = () => {
+export const Main = (props) => {
+    const {section1,section2, section3,section4, section6} = props.data.main
+
   return (
     <main>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
+      <Section1 data={section1}/>
+      <Section2 data={section2}/>
+      <Section3 data={section3}/>
+      <Section4 data={section4}/>
       <Section5 />
-      <Section6 />
+      <Section6 data={section6}/>
       <Section7 />
     </main>
   );
