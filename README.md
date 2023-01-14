@@ -1,1 +1,1 @@
-# Healt Care Application
+# Health Care Application
