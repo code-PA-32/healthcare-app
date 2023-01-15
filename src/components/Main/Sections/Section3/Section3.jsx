@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./section3.scss";
 
 export const Section3 = (props) => {
@@ -18,6 +18,18 @@ export const Section3 = (props) => {
 
 const Slider = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(1);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      currentIndex === data.length - 1
+        ? setCurrentIndex(0)
+        : setCurrentIndex(currentIndex + 1);
+    }, 4000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [currentIndex, data.length]);
 
   return (
     <div className="slideshow">

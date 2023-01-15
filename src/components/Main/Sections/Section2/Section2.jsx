@@ -11,13 +11,13 @@ import "./section2.scss";
 
 export const Section2 = (props) => {
   const { doctors, list } = props.data;
-  console.log(doctors);
   return (
     <section className="doctor" id="about">
       <div className="doctor-left">
         <div className="overflow-box">
           <img src={doctors[0].photo} alt="doctor" />
         </div>
+          <div className="bg-dots"></div>
         <Rate data={doctors} />
         <Skeleton />
       </div>

@@ -1,22 +1,19 @@
 @import "../../../../styles/variables.scss";
 
 .mobile_app {
-  padding: 0px 150px 100px 0;
+  padding: 0px 0px 100px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   &-image {
     width: 50%;
-    img {
-    //   width: 100%;
-    //   height: 100%;
-    }
   }
   &-description {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 40%;
+    width: 35%;
     h2 {
       font-weight: 500;
       font-size: 42px;
@@ -35,6 +32,85 @@
         margin-top: 10px;
         display: flex;
         gap: 20px;
+    }
+  }
+}
+
+
+
+@media (min-width: 800px) and (max-width: 1200px){
+  .mobile_app{
+    flex-direction: column;
+    &-image {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-description {
+      width: 80%;
+      text-align: center;
+      .app_links{
+        margin: 10px auto;
+    }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px){
+  .mobile_app{
+    flex-direction: column;
+    &-image {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-description {
+      width: 80%;
+      text-align: center;
+      .app_links{
+        margin: 10px auto;
+    }
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 600px){
+  .mobile_app{
+    flex-direction: column;
+    padding: 20px;
+    &-image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-description {
+      h2{
+        font-size: 30px;
+        line-height: 40px;
+      }
+      p{
+        font-size: 14px;
+      }
+      width: 100%;
+      text-align: center;
+      .app_links{
+        margin: 10px auto;
+    }
     }
   }
 }

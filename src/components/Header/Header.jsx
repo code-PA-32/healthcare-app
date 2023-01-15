@@ -8,7 +8,7 @@ export const Header = (props) => {
   const { links, locations, happyClients } = props.data.header;
   const [active, setActive] = useState("Home");
   const [visible, setVisible] = useState(true);
-  const [height, setHeight] = useState('');
+  const [height, setHeight] = useState("");
   const containerRef = useRef(null);
   const topHeaderRef = useRef();
 
@@ -16,7 +16,6 @@ export const Header = (props) => {
     const [entry] = entries;
     setVisible(entry.isIntersecting);
   };
-
 
   const options = {
     root: null,
@@ -34,14 +33,10 @@ export const Header = (props) => {
 
     return () => {
       if (containerRef.current) {
-
-
         observer.unobserve(containerRef.current);
       }
     };
-  }, [containerRef, options]);
-
-  console.log(visible, height);
+  }, [containerRef]);
 
   return (
     <header
@@ -57,7 +52,7 @@ export const Header = (props) => {
           visible
             ? {}
             : {
-              top: -height,
+                top: -height,
                 transform: `translateY(100%)`,
               }
         }
@@ -72,12 +67,14 @@ export const Header = (props) => {
                 key={item.name}
                 onClick={() => setActive(item.name)}
               >
-                <a href={'#' + item.to}>{item.name}</a>
+                <a href={"#" + item.to}>{item.name}</a>
               </li>
             ))}
           </ul>
         </nav>
-        <Button variant="contained"><a href="#booking">Get Started</a></Button>
+        <Button variant="contained">
+          <a href="#booking">Get Started</a>
+        </Button>
       </div>
       <HeaderInfo locations={locations} clients={happyClients} />
     </header>

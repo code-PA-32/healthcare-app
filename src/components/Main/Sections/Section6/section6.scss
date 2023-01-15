@@ -17,9 +17,9 @@
   &-slider {
     position: relative;
 
-    width: 90%;
-    padding-left: 31%;
-    padding-right: 30%;
+    width: 100%;
+    padding-left: calcFluidPadding(15, 530, 360, 1440);
+    padding-right: calcFluidPadding(15, 505, 360, 1440);
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
@@ -31,6 +31,9 @@
       transition: ease-out 1000ms;
       margin: 0 auto;
       gap: 30px;
+      .faded_slide {
+        opacity: 0;
+      }
       &-slide {
         background-color: white;
         img {
@@ -40,7 +43,7 @@
         position: relative;
         user-select: none;
         padding: 20px 20px 30px 40px;
-        width: 370px;
+        width: 350px;
         gap: 20px;
         display: flex;
         flex-direction: column;
@@ -54,6 +57,11 @@
           top: 0;
           left: 290px;
           transform: translate(0, -50%);
+          transition: 1s ease;
+        }
+        .quotes_active {
+          transform: rotate(180deg) translate(0, 50%);
+
         }
         .comment_info {
           width: 100%;
@@ -85,6 +93,59 @@
         color: #454d5d;
       }
     }
+    .dots {
+      display: none;
 
+      padding-left: calc(350px / 4);
+      gap: 15px;
+      .dot {
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #dbe8ee;
+        transition: all 1s ease;
+        align-items: center;
+      }
+      .dot-active {
+        width: 60px;
+        height: 18px;
+        border-radius: 10px;
+        background: #40a3f8;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1350px) {
+  .comments {
+    padding: 20px;
+    &-slider {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .comments {
+    padding: 0px;
+    &-slider {
+      width: 100%;
+    }
+    .dots {
+      display: flex;
+    }
+  }
+}
+@media (min-width: 360px) and (max-width: 600px) {
+  .comments {
+    padding: 0px;
+    &-slider {
+      width: 100%;
+      padding-left: calcFluidPadding(5, 460, 360, 1440);
+    }
+    .dots {
+      display: flex;
+    }
   }
 }

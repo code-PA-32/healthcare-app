@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./section6.scss";
 import { Star, Quotes } from "../../../../assets/media/MediaIcons";
 
@@ -14,13 +14,24 @@ export const Section6 = (props) => {
 const Slider = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(1);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      currentIndex === data.length - 1 ? setCurrentIndex(0) :
+      setCurrentIndex(currentIndex + 1);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [currentIndex, data.length]);
+
   return (
     <div className="comments-slider">
       <ul
         className="comments-slider-slides"
         style={{
           transform: `translate3d(${
-            -currentIndex * 370 - currentIndex * 30
+            -currentIndex * 350 - currentIndex * 30
           }px, 0, 0)`,
         }}
       >
@@ -28,9 +39,9 @@ const Slider = ({ data }) => {
           <li
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className="comments-slider-slides-slide"
+            className={currentIndex === i + 2 || currentIndex === i - 2 ? 'comments-slider-slides-slide faded_slide' : 'comments-slider-slides-slide'}
           >
-            <div className="quotes">
+            <div className={currentIndex === i ? 'quotes quotes_active' : 'quotes'}>
               <Quotes />
             </div>
             <img src={item.avatar} alt="avatar" />
@@ -51,6 +62,15 @@ const Slider = ({ data }) => {
           </li>
         ))}
       </ul>
+      <div className="dots">
+        {data.map((_, i) => (
+          <div
+            key={i}
+            className={currentIndex === i ? "dot dot-active" : "dot"}
+            onClick={() => setCurrentIndex(i)}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };

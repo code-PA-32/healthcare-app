@@ -216,7 +216,7 @@ export const data = {
           location: "New York, USA",
           stars: 5,
           comment:
-            "Telehealth is fueled by digital technologies and DocTime telemedicine app has brought a great revolution in medical services specially an overpopulated country where virtual chamber can create at anywhere throughout country",
+            "Telehealth is fueled by digital technologies and DocTime telemedicine app has brought a great revolution in medical services specially an overpopulated country where virtual chamber",
         },
         {
           avatar: av4,
@@ -232,8 +232,7 @@ export const data = {
           location: "San Francisco, USA",
           stars: 5,
           comment: `HealthCare is enlightens my superpower each and every time...!
-            I find DocTime a brand-able telemedicine platform with virtual waiting room, video consultation, e-prescription, beautifully planned user interface.
-            Thank you).`,
+            I find DocTime a brand-able telemedicine platform with virtual waiting room, video consultation, e-prescription, beautifully planned user interface.`,
         },
         {
           avatar: av5,

@@ -1,5 +1,14 @@
 @import "../../../../styles/variables.scss";
 
+// @function calcFluidPadding($f-min, $f-max, $v-min, $v-max) {
+//   $k: ($f-max - $f-min)/($v-max - $v-min);
+//   $b: $f-min - $k * $v-min;
+
+//   $b: $b * 1px;
+
+//   @return calc( #{$k} * 100% + #{$b} );
+// }
+
 .services {
   display: flex;
   flex-direction: column;
@@ -27,7 +36,7 @@
   .slideshow {
     padding-top: 50px;
     width: 100%;
-    padding-left: 35%;
+    padding-left: calcFluidPadding(15,545, 360, 1440);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -40,6 +49,7 @@
       gap: 60px;
     }
     .slide {
+      box-sizing: border-box;
       user-select: none;
       padding: 50px;
       width: 350px;
@@ -95,3 +105,41 @@
     }
   }
 }
+
+
+
+@media (min-width: 800px) and (max-width: 1350px){
+  .services {
+    padding: 20px;
+    &-info {
+      width: 80%;
+    }
+
+  }
+}
+
+
+@media (min-width: 360px) and (max-width: 600px){
+  .services {
+    padding: 0px;
+    padding-bottom: 20px;
+    h2{
+      font-size: 30px;
+    }
+    &-info {
+      width: 80%;
+      font-size: 14px;
+    }
+    .slideshow {
+      padding-left: calcFluidPadding(10,545, 360, 1440);
+      .topSlide-slider {
+        gap: 70px;
+      }
+      .slide {
+        padding: 40px;
+        width: 340px;
+      }
+    }
+  }
+}
+

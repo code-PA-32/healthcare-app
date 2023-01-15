@@ -3,11 +3,11 @@
 .booking {
   padding: 100px 135px 120px 135px;
 
-  &-wrapper::before{
+  &-wrapper::before {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
-    background-color: #40A3F8;
+    background-color: #40a3f8;
     left: 0;
     bottom: 0;
     height: 80%;
@@ -15,11 +15,9 @@
     border-radius: 12px;
     z-index: -1;
     background-image: url(../../../../assets/images/waveBG.png);
-
   }
 
   &-wrapper {
-    box-sizing: border-box;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -32,23 +30,102 @@
       font-size: 30px;
       line-height: 55px;
       text-transform: capitalize;
-      button{
+      button {
         margin-top: 10px;
         background-color: white;
         color: $mainBlueHeader;
         padding: 15px 20px;
         transition: all 0.3s;
       }
-      button:hover{
+      button:hover {
         color: #ffffff;
       }
     }
     &-image {
       width: 40%;
-      img{
+      img {
         height: 100%;
         width: 100%;
         display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+  .booking {
+    padding: 100px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .booking {
+    padding: 100px;
+    &-wrapper {
+      &-info {
+        font-size: 25px;
+        line-height: 40px;
+        align-self: flex-end;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .booking {
+    padding: 50px;
+    &-wrapper::before {
+      height: 100%;
+    }
+    &-wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &-image {
+        width: 90%;
+        align-self: flex-start;
+      }
+      &-info {
+        width: 90%;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        align-self: flex-end;
+        button {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+  .booking {
+    padding: 20px;
+    &-wrapper::before {
+      height: 100%;
+    }
+    &-wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &-image {
+        display: none;
+      }
+      &-info {
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        button {
+          padding: 10px;
+          font-size: 14px;
+        }
       }
     }
   }

@@ -1,5 +1,9 @@
 import { Button } from "@mui/material";
 import { useState, useEffect } from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 import {
   Location,
   SearchIconHeader,
@@ -8,10 +12,6 @@ import {
   VideoCall,
   Star,
 } from "../../../assets/media/MediaIcons";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import doctor from "../../../assets/images/header-doctor1.png";
 import heart from "../../../assets/images/heart.png";
 import feedback from "../../../assets/images/feedback1.png";
@@ -59,11 +59,8 @@ export const HeaderInfo = (props) => {
             >
               {<Location />}&#160;&#160;Location&#160;&#160;&#160;
             </InputLabel>
-            <Select
-              sx={{
-                width: 210,
-                background: "rgba(245, 246, 250, 0.52)",
-              }}
+            <Select 
+            className="header_form-select-input"
               MenuProps={MenuProps}
               value={location}
               label=" &#160;&#160;&#160;Location&#160;&#160;&#160;"
@@ -84,7 +81,7 @@ export const HeaderInfo = (props) => {
       </div>
 
       <div className="header-info-right">
-        <img src={doctor} alt="doctor" />
+        <img src={doctor} alt="doctor" className="header-info-right-image" />
         {logos.map((item, i) => (
           <div key={i} className={`callback header-info-right-logo-${i + 1}`}>
             {item}

@@ -56,6 +56,8 @@
     margin-top: 50px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 
@@ -118,4 +120,34 @@
 .fade-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-in;
+}
+@media (min-width: 900px) and (max-width: 1200px){
+  .doctors_list {
+    padding: 100px;
+    p{
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px){
+  .doctors_list {
+    padding: 50px;
+    p{
+      width: 80%;
+    }
+  }
+}
+@media (min-width: 360px) and (max-width: 600px){
+  .doctors_list {
+    padding: 20px;
+    h2{
+      font-size: 30px;
+      text-align: center;
+    }
+    p{
+      width: 80%;
+      font-size: 14px;
+    }
+  }
 }

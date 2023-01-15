@@ -1,25 +1,41 @@
 @import "../../../../styles/variables.scss";
 
 .doctor {
-  padding: 100px 100px 100px 150px;
+  padding: 100px 100px 100px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   &-left {
     position: relative;
     width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 150px repeat(23, 1fr);
+    grid-template-rows: repeat(24, 1fr);
     border-radius: 0 0 290px 290px;
     filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.2));
 
     .overflow-box {
+      position: relative;
+      grid-column: 2/24;
+      grid-row: 1/25;
       border-radius: 0 0 290px 290px;
       overflow: hidden;
     }
     img {
       display: block;
+      height: 100%;
+      width: 100%;
+    }
+    .bg-dots {
+      grid-row: 6/11;
+      grid-column: 5/11;
+      position: absolute;
+      z-index: -1;
+      display: block;
+      height: 170px;
+      width: 170px;
+      background-image: url(../../../../assets/images/dots.png);
+      background-position: center;
     }
     &-rate {
       position: absolute;
@@ -27,8 +43,8 @@
       height: 175px;
       background-color: white;
       border-radius: 15px;
-      top: 255px;
-      left: -70px;
+      grid-column: 1/4;
+      grid-row: 11/19;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -94,8 +110,8 @@
     }
     &-skeleton {
       position: absolute;
-      top: 150px;
-      left: 355px;
+      grid-row: 6/10;
+      grid-column: 16/25;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -192,13 +208,13 @@
     }
   }
 
-  &-left::before {
+  .overflow-box::before {
     content: "";
     display: block;
     position: absolute;
     height: 50%;
     width: 100%;
-    bottom: 6px;
+    bottom: 0px;
     background: #40a3f8;
     z-index: -1;
     border-radius: 0 0 290px 290px;
@@ -207,16 +223,68 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  &-left::after {
-    position: absolute;
-    content: "";
-    left: 90px;
-    top: 100px;
-    z-index: -1;
-    display: block;
-    height: 170px;
-    width: 170px;
-    background-image: url(../../../../assets/images/dots.png);
-    background-position: center;
+}
+
+@media (min-width: 800px) and (max-width: 1150px) {
+  .doctor {
+    padding: 50px;
+    flex-direction: column;
+    &-left {
+      width: 80%;
+    }
+    &-right {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .doctor {
+    padding: 20px;
+    flex-direction: column;
+    &-left {
+      width: 100%;
+      grid-template-columns: repeat(24, 1fr);
+      grid-template-rows: repeat(24, 1fr);
+      &-rate {
+        grid-row: 17/25;
+      }
+    }
+    &-right {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+  .doctor {
+    padding: 20px;
+    flex-direction: column;
+    gap: 50px;
+    &-left {
+      width: 100%;
+      grid-template-columns: repeat(24, 1fr);
+      grid-template-rows: repeat(24, 1fr);
+      &-skeleton {
+        display: none;
+      }
+      &-rate {
+        grid-row: 17/25;
+      }
+    }
+    &-right {
+      width: 100%;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 14px;
+      }
+      ul {
+        gap: 5px;
+        li {
+          font-size: 12px;
+        }}
+    }
   }
 }

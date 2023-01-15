@@ -1,2 +1,20 @@
 $mainBlueHeader: #40A3F8;
+$headerFontSize32: 32px;
+$headerLogoFontWeight: 600;
+$headerFontSize16: 16px;
+$headerFontSize24: 24px;
+$headerListColor: #262323;
+$headerFontSize14: 14px;
+$headerH2Color: #3e3e3e;
+$headerFontSize48: 48px;
+$headerInfoText: rgba(117, 117, 117, 0.46);
 
+
+@function calcFluidPadding($f-min, $f-max, $v-min, $v-max) {
+    $k: ($f-max - $f-min)/($v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+  
+    $b: $b * 1px;
+  
+    @return calc( #{$k} * 100% + #{$b} );
+  }

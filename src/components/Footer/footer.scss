@@ -14,17 +14,17 @@ footer {
     gap: 10px;
     h2 {
       font-family: "Rubik";
-      font-weight: 500;
-      font-size: 31.635px;
+      font-weight: $headerLogoFontWeight;
+      font-size: $headerFontSize32;
       line-height: 47px;
       letter-spacing: 1px;
-      color: #40a3f8;
+      color: $mainBlueHeader;
     }
     p {
       font-weight: 400;
-      font-size: 14px;
+      font-size: $headerFontSize14;
       line-height: 180%;
-      color: #646464;
+      color: $headerH2Color;
     }
     .contacts-social-list {
       display: flex;
@@ -46,15 +46,15 @@ footer {
     gap: 25px;
     li:first-of-type {
       font-weight: 700;
-      font-size: 16px;
+      font-size: $headerFontSize16;
       line-height: 16px;
-      color: #323232;
+      color: $headerListColor;
     }
     li {
       font-weight: 400;
-      font-size: 14px;
+      font-size: $headerFontSize14;
       line-height: 14px;
-      color: #646464;
+      color: $headerH2Color;
     }
   }
 
@@ -69,13 +69,13 @@ footer {
       font-weight: 700;
       font-size: 16px;
       line-height: 16px;
-      color: #323232;
+      color: $headerListColor;
     }
     span {
       font-weight: 400;
       font-size: 14px;
       line-height: 180%;
-      color: #646464;
+      color: $headerInfoText;
     }
     input {
       height: 40px;
@@ -83,13 +83,69 @@ footer {
       border: 1.1px solid #e1e2e4;
       border-radius: 5px;
       padding-left: 10px;
-      color: rgba(117, 117, 117, 0.65);
+      color: $headerInfoText;
     }
     input::placeholder {
-      color: rgba(117, 117, 117, 0.65);
+      color: $headerListColor;
     }
     .submit-button {
       background: $mainBlueHeader;
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+  footer {
+    padding: 35px 100px 50px 100px;
+  }
+}
+
+@media (min-width: 680px) and (max-width: 1000px) {
+  footer {
+    padding: 20px;
+
+    .about {
+      grid-column: 7/8;
+      grid-row: 1/5;
+    }
+    .links {
+      grid-column: 5/6;
+      grid-row: 1/5;
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 680px) {
+  footer {
+    padding: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    .contacts {
+      grid-column: 1/6;
+      grid-row: 1/4;
+      align-self: center;
+      justify-self: center;
+      h2{
+        font-size: 28px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+    .about {
+      grid-column: 2/3;
+      grid-row: 4/7;
+    }
+    .links {
+      grid-column: 4/6;
+      grid-row: 4/7;
+    }
+    form {
+      width: 80%;
+      justify-self: center;
+      grid-column: 1/6;
+      grid-row: 7/11;
+      padding: 40px 0 0 0 ;
     }
   }
 }
