@@ -1,14 +1,4 @@
 @import "../../../../styles/variables.scss";
-
-// @function calcFluidPadding($f-min, $f-max, $v-min, $v-max) {
-//   $k: ($f-max - $f-min)/($v-max - $v-min);
-//   $b: $f-min - $k * $v-min;
-
-//   $b: $b * 1px;
-
-//   @return calc( #{$k} * 100% + #{$b} );
-// }
-
 .services {
   display: flex;
   flex-direction: column;
