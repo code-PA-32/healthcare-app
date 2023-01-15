@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/healthcare-app/static/css/main.47d76c49.css",
-    "main.js": "/healthcare-app/static/js/main.98f96af5.js",
+    "main.css": "/healthcare-app/static/css/main.6b33c69b.css",
+    "main.js": "/healthcare-app/static/js/main.43519ce8.js",
     "static/media/header-doctor1.png": "/healthcare-app/static/media/header-doctor1.f2f6ce5210c264648428.png",
     "static/media/main-doctor.png": "/healthcare-app/static/media/main-doctor.446666be313b7179e55a.png",
     "static/media/main-mobile.png": "/healthcare-app/static/media/main-mobile.5cdf77e098dd18c11fb5.png",
@@ -32,11 +32,11 @@
     "static/media/slide-doctor6.jpg": "/healthcare-app/static/media/slide-doctor6.2bd1986de459784ec445.jpg",
     "static/media/dots.png": "/healthcare-app/static/media/dots.fb813d2ab57ddc8ed717.png",
     "index.html": "/healthcare-app/index.html",
-    "main.47d76c49.css.map": "/healthcare-app/static/css/main.47d76c49.css.map",
-    "main.98f96af5.js.map": "/healthcare-app/static/js/main.98f96af5.js.map"
+    "main.6b33c69b.css.map": "/healthcare-app/static/css/main.6b33c69b.css.map",
+    "main.43519ce8.js.map": "/healthcare-app/static/js/main.43519ce8.js.map"
   },
   "entrypoints": [
-    "static/css/main.47d76c49.css",
-    "static/js/main.98f96af5.js"
+    "static/css/main.6b33c69b.css",
+    "static/js/main.43519ce8.js"
   ]
 }
