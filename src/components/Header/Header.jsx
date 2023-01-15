@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { HeaderInfo } from "./AdvHeader/HeaderInfo";
+import { ArrowUp } from "../../assets/media/MediaIcons";
 import Button from "@mui/material/Button";
 
 import "./header.scss";
@@ -77,6 +78,12 @@ export const Header = (props) => {
         </Button>
       </div>
       <HeaderInfo locations={locations} clients={happyClients} />
+      <div
+        onClick={() => window.scrollTo(0, 0)}
+        className={visible ? "navigate_arrow" : "navigate_arrow arrow_active"}
+      >
+        <ArrowUp />
+      </div>
     </header>
   );
 };

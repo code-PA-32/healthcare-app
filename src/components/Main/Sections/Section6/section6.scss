@@ -57,11 +57,10 @@
           top: 0;
           left: 290px;
           transform: translate(0, -50%);
-          transition: 1s ease;
+          transition: all 1s ease;
         }
         .quotes_active {
           transform: rotate(180deg) translate(0, 50%);
-
         }
         .comment_info {
           width: 100%;
