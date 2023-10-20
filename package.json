@@ -2,6 +2,7 @@
   "homepage": "http://OleksandrVernichenko.github.io/healthcare-app",
   "name": "healtcare",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
